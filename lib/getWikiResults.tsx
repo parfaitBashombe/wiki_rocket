@@ -1,5 +1,11 @@
-import React from "react";
-
-export default function getWikiResults() {
-  return <div>getWikiResults</div>;
+export default async function getWikiResults(searchTerm: string) {
+  const searchParams = new URLSearchParams({
+    action: "query",
+    generator: "search",
+    gsrsearch: searchTerm,
+    gsrlimit: "20",
+    prop: "pageimages|extracts",
+    exchars: "100",
+    exintro: "true",
+  });
 }
