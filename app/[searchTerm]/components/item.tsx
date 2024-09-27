@@ -38,4 +38,5 @@ export default function Item({ result }: Props) {
   ) : (
     <article className="m-4 max-w-lg">{itemTextCol}</article>
   );
+  return content;
 }
